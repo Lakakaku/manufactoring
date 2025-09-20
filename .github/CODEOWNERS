@@ -1,0 +1,19 @@
+# Global code owners - will be requested for review on all PRs
+* @lucasjenner
+
+# Mobile app specific owners
+/apps/mobile/ @lucasjenner
+
+# Web dashboard specific owners
+/apps/web/ @lucasjenner
+
+# Video processing worker
+/apps/worker/ @lucasjenner
+
+# Database and backend
+*.sql @lucasjenner
+/supabase/ @lucasjenner
+
+# Documentation
+*.md @lucasjenner
+/docs/ @lucasjenner

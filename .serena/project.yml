@@ -1,0 +1,72 @@
+name: FactoryKnowledge
+description: Mobile-first video knowledge management platform for manufacturing facilities
+version: 0.1.0
+language: typescript
+
+# Project configuration for Serena MCP
+root_path: /Users/lucasjenner/manufactoring
+
+# Language servers configuration
+language_servers:
+  - name: typescript
+    languages: [typescript, typescriptreact, javascript, javascriptreact]
+    command: ["typescript-language-server", "--stdio"]
+  - name: python
+    languages: [python]
+    command: ["pylsp"]
+
+# Project-specific settings
+settings:
+  include_patterns:
+    - "**/*.ts"
+    - "**/*.tsx"
+    - "**/*.js"
+    - "**/*.jsx"
+    - "**/*.py"
+    - "**/*.json"
+    - "**/*.md"
+    - "**/*.yml"
+    - "**/*.yaml"
+
+  exclude_patterns:
+    - "**/node_modules/**"
+    - "**/.git/**"
+    - "**/dist/**"
+    - "**/build/**"
+    - "**/.next/**"
+    - "**/coverage/**"
+    - "**/.venv/**"
+    - "**/__pycache__/**"
+    - "**/*.pyc"
+    - "**/serena/**"  # Exclude the serena clone directory
+
+# Memory files for project context
+memory_files:
+  - name: project_overview
+    description: "High-level overview of FactoryKnowledge project"
+    path: memory/project_overview.md
+  - name: tech_stack
+    description: "Technology stack and architecture decisions"
+    path: memory/tech_stack.md
+  - name: development_roadmap
+    description: "Development tasks and roadmap"
+    path: memory/development_roadmap.md
+
+# Project structure hints for better code navigation
+structure:
+  apps:
+    mobile: "React Native mobile application"
+    web: "Next.js admin dashboard"
+    worker: "Video processing service"
+  packages:
+    shared: "Shared types, utilities, and business logic"
+    ui: "Shared UI components"
+
+# Development commands
+commands:
+  install: "npm install"
+  dev: "npm run dev"
+  build: "npm run build"
+  test: "npm run test"
+  lint: "npm run lint"
+  typecheck: "npm run typecheck"
